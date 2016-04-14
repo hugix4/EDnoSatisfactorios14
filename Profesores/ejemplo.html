@@ -1,0 +1,61 @@
+<?php
+// sustituir con los valores reales de 'servidor_mysql', 'usuario', 'clave' y
+'mi_base_de_datos', según sea necesario
+$cndbx = mysql_connect('servidor_mysql', 'usuario', 'clave');
+mysql_select_db('mi_base_de_datos');
+?>
+<!DOCTYPE html PUBLIC "//- W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml-1transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta httpequiv="
+ContentType"
+content="text/html; charset=iso88591"
+/>
+<title>Listas Vinculadas </title>
+<script type = “text/javascript”>
+function SeleccionarEmpleados(depto) {
+var o;
+document.forms.frmDatos.lstEmpleados.disabled = true;
+<?php
+$tabla_empleados = mysql_query(“SELECT * FROM empleados ORDER BY departamento ASC”);
+while($empl = mysql_fetch_array($tabla_empleados)) {
+?>
+if(depto == “<?php echo $empl['departamento']; ?>”) {
+o = document.createElement(“OPTION”);
+o.text = “<?php echo $empleado['empleado']”; ?>';
+o.value = “<?php echo $empleado['empleado']”; ?>';
+document.forms.frmDatos.lstEmpleados.options.add(o);
+}
+<?php
+}
+document.forms.frmDatos.lstEmpleados.disabled = false;
+}
+function ComponerLista(depto) {
+document.forms.frmDatos.lstDepartamentos.disabled = true;
+document.forms.frmDatos.lstEmpleados.lenght = 0;
+SeleccionarEmpleados(depto);
+document.forms.frmDatos.lstDepartamentos.disabled = false;
+}
+</script>
+</head>
+<body>
+<form name="frmDatos" action="" method="POST">
+<label>Departamentos
+<select name=”lstDepartamentos” onChange = “ComponerLista(this.value)”>
+<?php
+$tabla_deptos = mysql_query(“SELECT DISTINCT departamento FROM empresa ORDER BY departamento
+ASC”);
+while($depto = mysql_fetch_array($tabla_deptos)) {
+?>
+<option value = “ <?php echo $depto['departamento']; ?> “><?php echo
+$depto['departamento']; ?></option>
+<?php
+}
+?>
+</select>
+</label>
+<label>Empleados
+<select name=”lstEmpleados”></select>
+</label>
+</form>
+</body></html>

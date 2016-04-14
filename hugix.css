@@ -1,0 +1,479 @@
+/* reset */
+* {
+margin: 0;
+padding: 0;
+}
+div#loop{
+margin-left:7.5%;
+width: 85%;
+background:#233072;
+}
+/* render html5 elements as block */
+header, footer, section, aside, nav, article {
+display: block;
+}
+#grados{
+font-family: sans-serif;
+color: white;
+text-align:center;
+}
+
+body {
+background: #233072;/*Color de los laterales*/
+font-family: 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+color: white;/*Color de las letras del contenido principal*/
+font-size: 100%;
+line-height: 18px;
+overflow-y:auto;
+overflow-x:auto;
+}
+	
+div#unam {
+	width:300px;
+	height:90px;
+	top:2px;
+	left:280px;
+	position:absolute;
+	}
+
+div#logocgl {
+	width:280px;
+	height:90px;
+	top:2px;
+	left:780px;
+	position: absolute;
+	}
+	
+.foot{
+margin-left:0%;
+margin-right:0%;
+color:#050564;
+font: 100% 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+text-align:justify;
+width: 98%;
+margin: 0 auto;
+margin-top: 1%;
+margin-bottom: 0%; 
+}
+
+.alignright, img.alignright {
+display: inline;
+float: left;
+margin-left: 20%;
+}
+	
+.eval{
+margin-left:2%;
+margin-right:2%;
+color:white;
+font: 14px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+text-align:justify; 
+}
+.eval2{
+margin-left:2%;
+margin-right:2%;
+color:white;
+font: 14px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+text-align:center; 
+}
+.eval3{
+width:45%;
+margin-left:2%;
+margin-right:2%;
+color:white;
+font: 14px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+text-align:justify; 
+}
+h2.eval{
+margin-left:2%;
+color:white;
+font: 30px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+text-align:justify; 
+}
+h3.eval{
+margin-left:2%;
+color:white;
+font: 15px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+text-align:center; 
+}
+
+.letraw{color:white;}
+.img1{float:right;}
+.img2{margin-top:25%;
+margin-left:45%;
+width:20%;
+height:20%}
+	
+/* layout */
+
+#wrapper {
+font-size: 80%;
+width: 85%;
+margin: 0 auto;
+margin-top: -2.4%;
+margin-bottom: 20px;
+background: #050564;/*Color del fondo del top
+/* curved border radius */
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+nav {
+width: 860px;
+height: 50px;
+margin: 0 auto;
+background: #cb9d01;/*Color de la barra superior*/
+margin-top: -6px;
+}
+
+#main {
+width: 100%;
+margin: 0 auto;
+padding-top: 2.5%;
+background: #050564; /*Color del contenido en general*/
+background-image:url(images/cgl1e.png);
+overflow: hidden;
+}
+
+
+#content {
+float: right;
+width: 47%;
+margin-left: 2%;
+margin-top:0%;
+}
+
+#sidebar1 {
+float: left;
+padding-left: 1%;
+width: 100%;
+}
+
+#sidebar2 {
+float: right;
+padding-right: 3%;
+width: 45%;
+}
+
+footer {
+width: 100%;
+margin: 0 auto;
+clear: both;
+}
+
+/* basics */
+
+h1,h2,h3,h4,h5,h6 {
+font-weight: bold;
+clear: both;
+color: #fff;/*No hace cambios*/
+}
+
+a:link, a:visited {
+color:#fff;/*color de los links del contenido*/
+}
+
+a:hover, a:active {
+color: #cb9d01;/*Color al pasar el mouse sobre los links*/
+}
+
+p {
+margin-bottom: 18px;
+}
+
+li {
+padding-left: 5px;
+}
+
+
+div#menu {/*Aquí se ajusta la barra del menú*/
+    margin-top:-0.48%;
+    left:-20%;
+    width:140%;
+	z-index:2;
+	background:transparent url(images/header_bg.png) repeat-x 0 0;  
+}
+#menu {
+    position:relative;
+    z-index:2;
+    height:40px;
+}
+#menu .menu {/*Aquí se cambia la posición de las letras del menú*/
+    position:absolute;
+    padding-left: 19.7%;
+    background: url(images/header.png) right top no-repeat; 
+}
+#menu * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+}
+#menu a {/*Medidas de la barra del menu*/
+    display:block;
+    padding:10px 14px 14px 14px;
+    white-space:nowrap;
+}
+#menu li {
+    float:left;
+    background:#233091;
+}
+#menu li li {
+    float:none;
+}
+#menu div {
+    visibility:hidden;
+    position:absolute;
+    background:url(images/pix.gif);
+}
+#menu div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu div div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu li:hover>div { visibility:visible; }
+
+/* menu::special styles */
+/* menu::level 1 */
+#menu a {
+    text-decoration:none;
+    color:#233091;/*1*/
+    position:relative;
+    z-index:0;/*Espacio de los drop menu*/
+}
+#menu a:hover {
+    background:url(images/header.png) left -43px repeat-x;
+    color:#FFF;/*Nada*/
+}
+#menu a:hover span { color:#FFF; }
+#menu li.current a {
+    background: transparent url(images/header_active.png) repeat-x;
+    color:#233091;/*Letras activas*/
+}
+#menu li.current span {
+    color:#233091;/*Letras activas*/
+}
+#menu>ul>li:hover>a {
+    background:url(images/header.png) left -43px repeat-x;
+    color:#CACFD3;/*Quien sabe que hace ese color =S ??*/
+}
+#menu>ul>li:hover>a span { color:#233091;/*Color de las letras superiores al pasar el mouse*/ }
+#menu span {
+    text-transform:uppercase;
+    font:10px 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+    letter-spacing:0.2em;
+    text-decoration:none;
+    color:#fff;/*Color de las letras en reposo(Tal cual aparecen)*/
+}
+#menu li { background: url(images/header.png) left top no-repeat;}
+/* menu::level >= 2 */
+#menu ul ul {width: 150px;}
+#menu li li{
+	  background:#FFF;/*Este es el color del fondo del menu*/
+	  border-bottom:1px solid #233072;}
+#menu li li a {
+    position:static;
+    background:#FFF;/*Color del background de la lista desplegable*/
+    white-space:normal;
+    text-align: center;
+    color:#FFF;/*No hace nada*/
+    padding:0;
+		text-transform:none;
+		width: 100%;
+}
+#menu li.current li a {
+    background: none;
+    color:#000; /*Nada??*/
+}
+#menu li.current li span {
+    color:#233072;/*Color de las letras del menu que esta activo*/
+}
+#menu li li a:hover { background:#233072; }
+#menu li li a span { color:#233072;/*Color de las letras del menu que no esta activo*/ line-height: 15px; padding: 10px;	}
+#menu li li a:hover span { color:#ffffff; }
+#menu li li a.parent span{background:transparent url(images/arrow.png) no-repeat scroll right 50%; z-index:0;  }
+
+#menu li li span {
+    display:block;
+    text-transform:none;
+    padding:50px 25px 0px 0px;
+    font-size:11px;
+    letter-spacing: 0;
+}
+
+
+/* nav */
+
+nav .menu {
+font-size: 20%;
+font-weight: bold;
+}
+
+nav .menu ul {
+margin: 0;
+padding: 17px 0 0 20px;
+list-style: none;
+line-height: normal;
+}
+
+nav .menu li {
+display: block;
+float: left;
+}
+/*Letras del menu superior*/
+nav .menu a {
+display: block;
+float: left;
+margin-right: 5px;
+padding: 0px 15px;
+text-decoration: none;
+color: #050564;/*azul*/
+}
+/*Al pasar el mouse sobre el menu superior*/
+nav .menu a:hover {
+text-decoration: underline;
+color:#ffffff;/**/
+}
+
+/** HEADER */
+
+header {
+padding: 0 0 0 0;
+}
+
+header>h1 {
+float: left;
+margin: 0 0 18px 10px;
+width: 600px;
+font-size: 5%;
+line-height: 36px;
+}
+
+header>h1 a {
+color: #555;
+font-weight: bold;
+text-decoration: none;
+text-shadow: 0px 2px 3px #ddd;
+}
+
+header>h2 {
+color: #555;
+clear: right;
+float: right;
+font-style: italic;
+font-size: 3%;
+margin: 14px 10px 18px 0;
+}
+
+/** ARTICLES **/
+article img {
+border: none;
+/* curved border radius */
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+#content p, ul, ol, hr {
+margin-bottom: 6%;
+}
+
+#acu{
+text-align:justify;
+}
+
+#content ul ul, ol ol, ul ol, ol ul {
+margin-bottom: 0;
+}
+
+#content h1, h2, h3, h4, h5, h6 {
+color: #fff;/*Color de los titulos menus laterales*/
+margin: 0 0 20px 0;
+line-height: 1.5em;
+}
+
+.alignleft, img.alignleft {
+display: inline;
+float: left;
+margin-right: 10px;
+}
+
+.alignright, img.alignright {
+display: inline;
+float: right;
+margin-left: 10px;
+}
+
+.aligncenter, img.aligncenter {
+clear: both;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+img {
+margin-bottom: 2px;
+}
+
+/* sidebar and footer widget blocks */
+
+aside h3 {
+font-size: 100%;
+text-shadow: 0px 2px 3px #ddd;
+}
+
+aside ul {
+list-style: square;
+color: #cb9d01;/*cubos de los menus laterales*/
+margin: -15px 0 15px 25px;
+}
+
+#footer-area {
+background: #cb9d01;/*Color del fondo del footer*/
+color: #050564;
+font-size: 70%;
+padding: 15px 0;
+overflow: hidden;
+/* curved border radius */
+-moz-border-radius-bottomright: 8px;
+-moz-border-radius-bottomleft: 8px;
+-webkit-border-bottom-left-radius: 8px;
+-webkit-border-bottom-right-radius: 8px;
+}
+
+.footer-segment {
+float: left;
+margin-top: -1%;
+margin-bottom: 0%;
+margin-right: 20px;
+margin-left: 10px;
+width: 100%;
+}
+
+footer aside h4 {
+color: #050564;/*Color "titulo" del footer*/
+font-size: 100%;
+line-height: 1.5em;
+}
+
+footer ul {
+list-style: none;
+margin: -15px 0;
+}
+
+footer li,a:link, footer a:visited {
+color: #e3e6ff; /*Color de los links*/
+text-decoration: none;
+}
+
+footer a:hover { 
+text-decoration: none;
+color:#233072;/*Color de las letras al pasar el mouse sobre los links*/
+}
+
+footer p {
+margin-top: -15px;
+color: #050564;/*Color de letras*/
+}
